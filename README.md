@@ -16,7 +16,7 @@
 - 没有广告
 
 ### 展示：
-URL：https://yinlongcoding.github.io/dictionary.github.io/
+URL：http://sliver.site/dictionary.github.io/index.html
 
 ### 技术栈：
 - Vue.js       数据的双向绑定，交互数据更新
