@@ -25,7 +25,7 @@ URL：https://yinlongcoding.github.io/dictionary.github.io/
 
 ### 关于优化
 * V2.0 (优化中...)
-    - 优化代码，基于Vue.js commonents 实现模块化
+    - 优化代码，基于Vue.js components 实现模块化
     - 去除备选单词列表，输入框改为header
     - 添加节流函数，解决关于输入框内每添加(删除)一个字符时频繁触发请求造成性能问题  
     - 添加响应式支持移动端使用
