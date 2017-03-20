@@ -16,7 +16,7 @@
 - 没有广告
 
 ### 展示：
-V_1.0 URL: http://sliver.site/dictionary.github.io/index.html 
+V_1.0 URL: http://sliver.site/dictionary.github.io/index.html  
 V_2.0 URL: http://sliver.site/dictionary.github.io/dictionary.html
 
 ### 技术栈：

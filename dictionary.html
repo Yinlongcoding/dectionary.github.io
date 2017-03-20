@@ -29,7 +29,7 @@
       <div class="wordcontents">
         <h1>
           <i class="iconfont icon-write"></i>
-          {{ searchWord }} 
+          <span v-show=" searchWord != '' ">{{ searchWord }}</span> 
           <!-- <i>{{ contents[0].senses[0].pos[0] }}</i> -->
         </h1>
         <div v-for="content in contents" class="wordcontent">            

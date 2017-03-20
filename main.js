@@ -29,11 +29,13 @@ Vue.component('mean', {
 Vue.component('senses', {
   props: ['sense'],
   template:`
-  <div>
-      <i v-show="sense.guideword != ''" class="iconfont icon-start"></i>   
+  <div v-show="sense.guideword != ''" >
+    <div>
+      <i class="iconfont icon-start"></i>   
       <span>{{ sense.hw }}</span>
       <span>{{ sense.pos[0] }}</span>
-      <span v-show=" sense.guideword != '' ">[ {{ sense.guideword }} ]</span>
+      <span>[ {{ sense.guideword }} ]</span>
+    </div>
     <div v-for="example in sense.examples">
       <p>{{example.en}}</p> 
       <p>{{example.cn}}</p>
