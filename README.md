@@ -16,7 +16,8 @@
 - 没有广告
 
 ### 展示：
-URL：http://sliver.site/dictionary.github.io/index.html
+V_1.0 URL: http://sliver.site/dictionary.github.io/index.html 
+V_2.0 URL: http://sliver.site/dictionary.github.io/dictionary.html
 
 ### 技术栈：
 - Vue.js       数据的双向绑定，交互数据更新
@@ -25,10 +26,12 @@ URL：http://sliver.site/dictionary.github.io/index.html
 
 ### 关于优化
 * V2.0 (优化中...)
-    - 优化代码，基于Vue.js components 实现模块化
+    - 优化代码，基于Vue.js components 实现组件化
     - 去除备选单词列表，输入框改为header
-    - 添加节流函数，解决关于输入框内每添加(删除)一个字符时频繁触发请求造成性能问题  
+    - 页面整体布局改动
+    - 解决关于输入框内每添加(删除)一个字符时频繁触发请求造成性能问题  
     - 添加响应式支持移动端使用
+    - 添加多色彩模式，包含夜间模式
     
 * V2.1 预期改动
     - 重新添加备选单词，模糊搜索算法的支持
@@ -47,4 +50,4 @@ URL：http://sliver.site/dictionary.github.io/index.html
         - 添加意见模块，使用者可以通过发邮件等发表对我的意见
 
 ### 总结一下：
-####善于发现问题和解决问题才是优化的最终目的，页面性能的提升才是需求的源泉。
+善于发现问题和解决问题才是优化的最终目的，页面性能的提升才是需求的源泉。

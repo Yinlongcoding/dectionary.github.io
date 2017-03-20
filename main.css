@@ -1,0 +1,281 @@
+/* =========
+  	global
+   ========= */
+html {
+	font-size: 62.6%;
+	color: #34495e;
+}
+
+::selection {
+	color: #fff;
+	background-color: #b3d4fc;
+}
+a {
+	text-decoration: none;
+	color: #222;	
+}
+
+body, div, h1,li, p, ul,input{
+	margin: 0;
+	padding: 0;
+	line-height: 1.8rem;
+}
+
+img {
+	border: none;
+}
+
+ul, li {
+	list-style: none outside none;
+}
+
+.app {
+	width: 80%;
+	padding: 0 1rem;
+	margin: 0 auto;
+	box-shadow: 0rem 4rem 3rem rgba(0, 0, 0, 0.033);
+}
+/* ========
+	tool
+   ======== */
+
+.clear-fix:before,
+.clear-fix:after {
+	content: " ";
+	display: table;
+}
+
+.clear-fix:after {
+	clear: both;
+}
+
+/* ========
+	header
+   ======== */
+header {
+	width: 60%; 
+	display: inline-block;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+header h1 {
+	float: left;
+	font-family: 'Savoye LET';
+	margin-top: 1rem;
+	padding-top: 1rem;
+	font-size: 6rem;
+	color: #42b983;
+}
+
+.searchInput {
+
+	display: inline-block;
+	width: 30rem;
+	height: 3rem;
+	margin: 1rem 0 0 3rem;
+	border: 1px solid #999999;
+	border-radius: 3rem;
+}
+
+.searchInput input {
+	outline: none;
+	height: 3rem;
+	width: 18rem;
+	border-radius: 3rem;
+	border: transparent;
+	padding-left: 2rem;
+	font-size: 2.5rem;
+	color: #2c3e50;
+}
+
+.searchInput .delword, .searchword {
+	float: right;
+	outline: none;
+	height: 3rem;
+	border: none;	
+	border-radius: 1rem;
+	background-color: white;
+}
+
+.searchInput .delword {
+	margin-right: 2.5rem;
+}
+
+.searchInput .delword i {
+	color: #e9f1f6;
+}
+
+.searchInput .searchword {
+	border-radius: 3rem;
+	width: 4rem;
+	background-color: #42b983;
+}
+
+.searchInput .searchword i {
+	color: white;
+}
+
+/* ========
+	main
+   ======== */
+main {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.5rem;
+	border-radius: 3rem;
+}
+
+.wordcontents {
+	width: 70%;
+	padding: 1rem;
+}
+
+.wordcontents h1 {
+	line-height: 3rem;
+	background-color: #42b983;
+	color: #fff;
+	text-indent: 2rem;
+}
+
+.wordcontents h1 i {
+	font-size: 2rem;
+}
+
+.wordcontents .wordcontent {
+	margin-top: 0.5rem;
+	padding-left: 1rem; 
+}
+
+.wordcontents .pron {
+	line-height: 3rem;
+	font-size: 1.6rem;
+	color: #333;
+}
+
+.wordcontents .pron i {
+	font-style: normal;
+
+}
+
+.wordcontents .pron .country {
+	color: #ff9600;
+}
+
+.wordcontents .pron .us {
+	margin-left: 1rem;
+}
+
+.wordcontents .pron button {
+	outline: none;
+	padding: 0;
+	border: none;
+	background:none;
+}
+
+.wordcontents .pron button i {
+	font-size: 2rem;
+	color: #636363;
+}
+
+.wordcontents .def {
+	padding-top: 0.5rem;
+	font-size: 1.6rem;
+	word-spacing: 1px;
+	color: #333;	
+}
+
+.wordcontents .def i {
+	font-size: 2rem;
+	color: #FFD39B;
+}
+.wordcontents .def span:nth-child(3) {
+	color: #b0b0b0;
+}
+
+.wordcontents .mean {
+	padding-top: 0.5rem;
+	font-size: 1.6rem;
+}
+
+.wordcontents .mean em {
+	font-style: normal;
+	font-size: 1.5rem;
+	color: #e96900;
+}
+
+.wordcontents .mean p {
+	line-height: 2rem;
+}
+
+.wordcontents .example{
+	padding-top: 0.8rem;
+	font-size: 1.5rem;
+}
+
+.wordcontents .example p {
+	line-height: 2rem;
+}
+
+.wordcontents .example p:first-child {
+	font-weight: 300;
+	font-size: 1.6rem;
+	color: #333;
+}
+/* ========
+	history 
+   ======== */
+.history {	
+	margin-top: 1rem;
+	padding: 0 1rem 1rem;
+	width: 15rem;
+}
+
+.history h1 {
+	line-height: 3rem;
+}
+
+.history h1 i {
+	font-size: 2rem;
+	color: #42b983;
+}
+
+.history ul li {
+	padding-left: 0.3rem;
+}
+
+.history ul li:hover{
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.033);
+}
+
+
+.history ul li:hover button {
+	color: #FFD39B;
+}
+.history ul li button {
+	outline: none;
+	padding: 0;
+	background: #fff;
+	border: none;
+	color: transparent;
+}
+
+.history ul li span {
+	display: inline-block;
+	width: 80%;
+	line-height: 2rem;
+	margin-left: 1rem;
+	font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+

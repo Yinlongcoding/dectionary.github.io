@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="font_dmctuletd4fmkj4i/iconfont.css">
+  <title>pages</title>
+</head>
+<body>
+  <div class="app">
+    <header class="clear-fix">
+        <h1>Dictionary</h1>
+        <div class="searchInput clear-fix">
+          <input type="text" 
+                  v-model="inputWord" @keyup.13="search"
+                  :autofocus=" inputWord === '' ">  
+            
+          <button class="searchword" @click=" search ">
+            <i class="iconfont icon-search"></i>
+          </button>
+          <button class="delword" @click=" del " 
+                  v-show=" inputWord != '' ">
+            <i class="iconfont icon-del"></i>
+          </button>
+        </div>
+    </header>
+    
+    <main>
+      <div class="wordcontents">
+        <h1>
+          <i class="iconfont icon-write"></i>
+          {{ searchWord }} 
+          <!-- <i>{{ contents[0].senses[0].pos[0] }}</i> -->
+        </h1>
+        <div v-for="content in contents" class="wordcontent">            
+          <phonetic class="pron" :prons="content.prons"></phonetic>          
+          <div v-for="mean in content.senses">
+            <senses class="def" :sense="mean"></senses>
+            <div v-for="defs in mean.defs">
+                <mean class="mean" :means="defs"></mean>
+              <div v-for="example in defs.examples">
+                <examples class="example" :example="example"></examples>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   
+
+        <div class="history">
+          <h1>
+            <i class="iconfont icon-history"></i>
+          Your History
+          </h1>
+          <div>
+            <ul>
+              <li v-for=" (history, index) in histories ">
+                <button @click=" delHistory(index) ">
+                  <i class="iconfont icon-del"></i>
+                </button>
+                <span>{{history}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>   
+    </main>
+</div>  
+</body>
+<script src="vue.js"></script>
+<script src="jquery.min.js"></script>
+<script src="main.js"></script>
+</html>
