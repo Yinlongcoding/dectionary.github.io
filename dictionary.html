@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="app">
-    <header class="clear-fix">
+    <header>
         <h1>Dictionary</h1>
         <div class="searchInput clear-fix">
           <input type="text" 
@@ -24,8 +24,8 @@
           </button>
         </div>
     </header>
-    
-    <main>
+
+    <main v-show=" contents != '' ">
       <div class="wordcontents">
         <h1>
           <i class="iconfont icon-write"></i>
@@ -63,9 +63,17 @@
           </div>
         </div>   
     </main>
-</div>  
+  </div>
+
+<!--   <div class="hide">
+	<h1>Just like it, and study it!</h1>		
+  </div> --> 
+
 </body>
 <script src="vue.js"></script>
 <script src="jquery.min.js"></script>
 <script src="main.js"></script>
+<script>
+	document
+</script>
 </html>

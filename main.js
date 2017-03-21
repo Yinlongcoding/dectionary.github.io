@@ -6,13 +6,13 @@ Vue.component('phonetic',{
     <i>/{{prons[0].text}}/</i>
     <button class="defAm">
       <i class="iconfont icon-laba"></i>
-      <audio :src="prons[0].mp3" ></audio>
+      <audio class="play" :src="prons[0].mp3" ></audio>
     </button>
     <span class="country us">US</span>
     <i>/{{prons[1].text}}/</i>
-    <button>
+    <button class="defEn">
       <i class="iconfont icon-laba"></i>
-      <audio :src="prons[1].mp3"></audio>
+      <audio class="play" :src="prons[1].mp3"></audio>
     </button> 
   </div>`
 })
@@ -58,7 +58,8 @@ var app = new Vue({
     inputWord: '',
     searchWord: JSON.parse(localStorage.searchWord || '[]'),
     contents: JSON.parse(localStorage.contents || '[]'),
-    histories: JSON.parse(localStorage.histories || '[]'),  
+    histories: JSON.parse(localStorage.histories || '[]'),
+    
   },
   watch: {
     searchWord: function() {
@@ -77,9 +78,10 @@ var app = new Vue({
       $.getJSON(`http://damiao.io:5000/word/${that.inputWord}`, (data)=>{
         that.contents = data
         that.searchWord = data[0].headword
-        if(that.histories.indexOf(that.searchWord)){
+        if(that.histories.indexOf(that.searchWord) === -1) {
             that.histories.push(that.searchWord)
         }
+        
       })
     },
     del: function() {
@@ -90,3 +92,7 @@ var app = new Vue({
     }
   }
 })
+
+
+$('.defAm').click(function(){$(this)[0].querySelector('audio').play()})
+$('.defEn').click(function(){$(this)[0].querySelector('audio').play()})
