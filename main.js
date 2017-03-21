@@ -75,14 +75,16 @@ var app = new Vue({
  methods: {
     search: function() {
       var that = this
-      $.getJSON(`http://damiao.io:5000/word/${that.inputWord}`, (data)=>{
-        that.contents = data
-        that.searchWord = data[0].headword
-        if(that.histories.indexOf(that.searchWord) === -1) {
-            that.histories.push(that.searchWord)
-        }
-        
-      })
+      if(that.inputWord != '' ) { 
+        var input = that.inputWord.toLocaleLowerCase()
+        $.getJSON(`http://damiao.io:5000/word/${input}`, (data)=>{
+          that.contents = data
+          that.searchWord = data[0].headword
+          if(that.histories.indexOf(that.searchWord) === -1) {
+              that.histories.push(that.searchWord)
+          } 
+        })
+      }  
     },
     del: function() {
       this.inputWord = ''
@@ -93,6 +95,3 @@ var app = new Vue({
   }
 })
 
-
-$('.defAm').click(function(){$(this)[0].querySelector('audio').play()})
-$('.defEn').click(function(){$(this)[0].querySelector('audio').play()})

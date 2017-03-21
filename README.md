@@ -19,6 +19,10 @@
 V_1.0 URL: http://sliver.site/dictionary.github.io/index.html  
 V_2.0 URL: http://sliver.site/dictionary.github.io/dictionary.html
 
+### 迭代过程：
+每一天的迭代内容我都会在 update.md 里生命  
+url：http://sliver.site/dictionary.github.io/update.md
+
 ### 技术栈：
 - Vue.js       数据的双向绑定，交互数据更新
 - jQuery Ajax  数据情求与字符串拼接
@@ -32,7 +36,7 @@ V_2.0 URL: http://sliver.site/dictionary.github.io/dictionary.html
     - 解决关于输入框内每添加(删除)一个字符时频繁触发请求造成性能问题  
     - 添加响应式支持移动端使用
     - 添加多色彩模式，包含夜间模式
-    
+
 * V2.1 预期改动
     - 重新添加备选单词，模糊搜索算法的支持
     - 去除添加的jQuery，Ajax & 其他一些必要的DOM操作使用自封装方法

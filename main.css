@@ -29,11 +29,16 @@ ul, li {
 	list-style: none outside none;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .app {
 	width: 80%;
 	padding: 0 1rem;
 	margin: 0 auto;
-	box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.033);
+	box-shadow: 0 0 3rem
+    rgba(0, 0, 0, 0.133)
 }
 /* ========
 	tool
@@ -54,9 +59,9 @@ ul, li {
    ======== */
 header {
 	display: flex; 
-	padding: 1rem;
+	padding: 2rem 1rem 3rem 1rem;
 	margin-bottom: 1rem;
-	margin-top: 1rem;
+
 }
 
 header h1 {
@@ -104,7 +109,7 @@ header h1 {
 }
 
 .searchInput .delword i {
-	color: #e9f1f6;
+	color:#FFD39B;
 }
 
 .searchInput .searchword {
@@ -134,7 +139,7 @@ main {
 
 .wordcontents h1 {
 	line-height: 3rem;
-	background-color: #42b983;
+	background: linear-gradient(to right, #42b983, #fff);;
 	color: #fff;
 	text-indent: 2rem;
 }
@@ -277,13 +282,65 @@ main {
 
 .hide {
 	display: none;
-	width: 80%;
-	height: 30rem;
-	padding: 0 1rem;
+	width: 45%;
+	height: 23rem;
 	margin: 0 auto;
 	display: flex;
-	justify-content: center;
+	align-items: center;
 }
+
+.hide-content {
+	margin-top: 15rem;
+	padding: 2rem 2rem 2rem 3rem;
+	box-shadow: 0 1px 4px 
+    rgba(0, 0, 0, 0.3), 0 0 4rem
+    rgba(0, 0, 0, 0.1) inset;
+    background: linear-gradient(#F5DEB3,#FFF8DC,#F5DEB3);
+}
+
+.hide-content h4 {
+	line-height: 2rem;
+	margin: 1rem 0 0.5rem 0;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.hide-content p {
+	font-size: 1.4rem;
+	word-spacing: 2px;
+	line-height: 2rem;
+}
+
+.hide-content p em{
+	font-style: normal;
+}
+
+.hide-content p:nth-child(2) {
+	text-indent: 1.5rem;
+	line-height: 2.2rem;
+}
+
+.hide-content p:nth-child(3) {
+	text-indent: 1.5rem;
+	line-height: 2.2rem;
+	margin-bottom: 3rem;
+
+}
+
+.hide-content p:nth-child(4) {
+	text-align: right;
+	margin-right: 1rem;
+}
+
+.hide-content address {
+	text-align: right;
+	font-size: 1.5rem;
+	font-style: normal;
+	line-height: 2rem;
+	margin-right: 1rem;
+}
+
+
 
 
 
