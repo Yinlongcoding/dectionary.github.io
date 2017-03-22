@@ -61,7 +61,7 @@ header {
 	display: flex; 
 	padding: 2rem 1rem 3rem 1rem;
 	margin-bottom: 1rem;
-
+	color: #2c3e50;
 }
 
 header h1 {
@@ -92,7 +92,8 @@ header h1 {
 	border: transparent;
 	padding-left: 2rem;
 	font-size: 2.5rem;
-	color: #2c3e50;
+	color: inherit;
+	background-color: inherit;
 }
 
 .searchInput .delword, .searchword {
@@ -101,7 +102,7 @@ header h1 {
 	height: 3rem;
 	border: none;	
 	border-radius: 1rem;
-	background-color: white;
+	background-color: inherit;
 }
 
 .searchInput .delword {
@@ -110,6 +111,7 @@ header h1 {
 
 .searchInput .delword i {
 	color:#FFD39B;
+	background-color: inherit ;
 }
 
 .searchInput .searchword {
@@ -343,6 +345,7 @@ main {
 /* =======
 	asdie
    ======= */
+
 .aside {
 	position: fixed;
 	right: 0;
@@ -350,9 +353,56 @@ main {
 }
 
 
+.aside-nav li {
+	height: 4rem;
+	width: 4rem;
+	text-align: center;
+	opacity: 0.1;
+	transition: opacity .5s linear;
+}
+
+.aside-nav li:first-child {
+	opacity: 1;
+}
+
+.aside-nav li i {
+	font-size: 3.5rem;
+	display: inline-block;
+	margin-top: 1.1rem;
+}
+
+.aside-nav li i[name="sunning"] {
+	color: #FFDEAD;
+	text-shadow:0rem 0rem 2rem #FFDEAD; 
+}
 
 
+.aside-nav li i[name="night"] {
+	color: #a2abd3;
+	text-shadow:0rem 0rem 2rem #324d90;
+}
 
+
+.aside-nav li i[name="spring"] {
+	color: #9BCD9B;
+	text-shadow:0rem 0rem 3rem #9BCD9B;
+}
+
+
+.aside-nav li i[name="summer"] {
+	color:#BFEFFF;
+	text-shadow:0rem 0rem 3rem #FF8247;
+}
+
+.aside-nav li i[name="autume"] {
+	color: #DEB887;
+	text-shadow:0rem 0rem 3rem #FFA54F;
+}
+
+.aside-nav li i[name="winter"] {
+	color: #C6E2FF;
+	text-shadow:0rem 0rem 3rem #Fcfcfc;
+}
 
 
 
