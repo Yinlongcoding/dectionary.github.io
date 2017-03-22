@@ -29,6 +29,22 @@ ul, li {
 	list-style: none outside none;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
 [v-cloak] {
   display: none;
 }
@@ -197,6 +213,11 @@ main {
 	font-size: 2rem;
 	color: #FFD39B;
 }
+
+.wordcontents .def span {
+	color: inherit;
+}
+
 .wordcontents .def span:nth-child(3) {
 	color: #b0b0b0;
 }
@@ -230,7 +251,7 @@ main {
 .wordcontents .example p:first-child {
 	font-weight: 300;
 	font-size: 1.6rem;
-	color: #333;
+	color: inherit;
 }
 /* ========
 	history 
@@ -258,16 +279,14 @@ main {
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.033);
 }
 
-
-.history ul li:hover button {
-	color: #FFD39B;
-}
 .history ul li button {
 	outline: none;
 	padding: 0;
-	background: #fff;
+	background: inherit;
 	border: none;
 	color: transparent;
+	opacity: 0;
+	transition: opacity .3s linear;
 }
 
 .history ul li span {
@@ -276,6 +295,11 @@ main {
 	line-height: 2rem;
 	margin-left: 1rem;
 	font-size: 1.5rem;
+}
+
+.history ul li:hover button {
+	color: #FFD39B;
+	opacity: 1;
 }
 
 /* =======
