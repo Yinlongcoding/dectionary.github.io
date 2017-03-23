@@ -30,6 +30,15 @@ url：http://sliver.site/dictionary.github.io/update.md
 - CSS(3)       选择器&shadow&transition...   
 - HTML(5)      viewprot&媒体标签&canvas
 
+### 关于兼容
+* "大佬"-IE
+    - 兼容到IE9(其他我不去关系，某猫都宣布 IE8被阉了)
+    - “优雅降级”-某些CSS3的特性9并不支持，所以有些情况下不会有特别炫酷的样式
+    - 有些 HTML(5)的新标签不支持，只能指望webpack
+    - 还是由衷的希望你使用最新版的Chrome来观看页面效果
+* 360之类的
+    - 尽力兼容，有时候所谓的双核并非好事
+
 ### 关于优化
 * V2.0 (优化中...)
     - 优化代码，基于Vue.js components 实现组件化
@@ -58,4 +67,9 @@ url：http://sliver.site/dictionary.github.io/update.md
         - 添加意见模块，使用者可以通过发邮件等发表对我的意见
 
 ### 总结一下：
-善于发现问题和解决问题才是优化的最终目的，页面性能的提升才是需求的源泉。
+- 善于发现问题和解决问题才是优化的最终目的，页面性能的提升才是需求的源泉。
+- 继承CommonJs的思想，webpack打包是最终的走向
+
+### 我有话要说： 
+我需要一份工作
+我想用一个canvas标签写完整个页面

@@ -16,9 +16,10 @@ a {
 }
 
 body, div, h1,li, p, ul,input{
-	margin: 0;
+	margin: 0;	
 	padding: 0;
 	line-height: 1.8rem;
+	font-family:"Microsoft YaHei";
 }
 
 img {
@@ -79,8 +80,8 @@ header {
 	color: #2c3e50;
 }
 
-header h1 {
-	font-family: 'Savoye LET';
+header h1 {	
+	font-family: "Savoye LET", "Adobe Caslon Pro";
 	margin-top: 1rem;
 	padding-top: 1rem;
 	font-size: 6rem;
@@ -90,7 +91,7 @@ header h1 {
 
 
 .searchInput {
-
+	
 	display: inline-block;
 	width: 30rem;
 	height: 3rem;
@@ -234,8 +235,8 @@ main {
 }
 
 .wordcontents .mean p {
+	color: #F4A460;
 	line-height: 2rem;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.189);
 }
 
 .wordcontents .example{
