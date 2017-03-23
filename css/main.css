@@ -44,7 +44,6 @@ ul, li {
 }
 
 
-
 [v-cloak] {
   display: none;
 }
@@ -54,7 +53,7 @@ ul, li {
 	padding: 0 1rem;
 	margin: 0 auto;
 	box-shadow: 0 0 3rem
-    rgba(0, 0, 0, 0.133)
+    rgba(0, 0, 0, 0.133);
 }
 /* ========
 	tool
@@ -381,7 +380,7 @@ main {
 	height: 4rem;
 	width: 4rem;
 	text-align: center;
-	opacity: 0.1;
+	opacity: 0.5;
 	transition: opacity .5s linear;
 }
 
@@ -407,7 +406,7 @@ main {
 }
 
 
-.aside-nav li i[name="spring"] {
+/*.aside-nav li i[name="spring"] {
 	color: #9BCD9B;
 	text-shadow:0rem 0rem 3rem #9BCD9B;
 }
@@ -426,6 +425,18 @@ main {
 .aside-nav li i[name="winter"] {
 	color: #C6E2FF;
 	text-shadow:0rem 0rem 3rem #Fcfcfc;
+}*/
+
+/* =======
+   particles-js
+   ======= */
+#particles-js {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
 }
 
 

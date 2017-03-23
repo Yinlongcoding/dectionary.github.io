@@ -8,14 +8,18 @@ $(function(){
 	$('.night').click(function(){
 		var style = document.createElement('style')
 			style.innerHTML = `
-				body { background: #303030;  opacity: 0.5; }
+				body { background: #303030;}
 				header { color: #b0b0b0;}
-				.wordcontents h1 { line-height: 3rem; background: -webkit-linear-gradient(left, #42b983, #303030); background: -o-linear-gradient(left, #42b983, #303030);background: linear-gradient(to right, #42b983, #303030);color: #fff;text-indent: 2rem;}
-				.wordcontents .pron i { color: #fff;}
-				.wordcontents .def { color: #fff;}
-				.wordcontents .mean { color: #FFD39B;}
-				.wordcontents .example { color: #f2f2f2; }
-				.history { color: #fff; }
+				.wordcontents h1 { line-height: 3rem; 
+					background: -webkit-linear-gradient(left, #42b983, #303030); 
+					background: -o-linear-gradient(left, #42b983, #303030);
+					background: linear-gradient(to right, #42b983, #303030);
+					color: #fff;text-indent: 2rem;}
+				.wordcontents .pron i { color: #b0b0b0;}
+				.wordcontents .def { color: #b0b0b0;}
+				.wordcontents .mean { color: #EEC591;}
+				.wordcontents .example { color: #b0b0b0; }
+				.history { color: #b0b0b0; }
 				.history ul li i { background-color: inherit; }`
 		
 		$('head')[0].appendChild(style)
