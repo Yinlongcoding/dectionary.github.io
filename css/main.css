@@ -90,19 +90,16 @@ header {
 	width: 70%;
 	display: flex; 
 	padding: 2rem 1rem 3rem 1rem;
-	/*margin-bottom: 1rem;*/
 	color: #6d7993;
 }
 
 header h1 {	
 	font-family: "Didot", "Adobe Caslon Pro";
-	/*margin-top: 1rem;*/
 	padding-top: 1rem;
 	font-size: 6rem;
 	color: inherit;	
 	text-shadow: 0 1px 10px rgba(0, 0, 0, 0.03);
 }
-
 
 .searchInput {
 	width: 23rem;
@@ -131,6 +128,7 @@ header h1 {
 
 .searchInput .delword, .searchword {
 	height: 3rem;
+	cursor: pointer;
 }
 
 .searchInput .delword {
@@ -319,27 +317,22 @@ main {
    ======= */
 
 .hide {
-	display: none;
-	width: 45rem;
-	height: 23rem;
+	width: 45%;
 	margin: 0 auto;
-	display: flex;
-	align-items: center;
+	display: none;
+	font-family: "Didot";
 }
 
 .hide-content {
-	margin-top: 15rem;
+	margin-top: 5rem;
 	padding: 2rem 2rem 2rem 3rem;
-	box-shadow: 0 1px 4px 
-    rgba(0, 0, 0, 0.3), 0 0 4rem
-    rgba(0, 0, 0, 0.1) inset;
-    background: linear-gradient(#F5DEB3,#FFF8DC,#F5DEB3);
 }
 
 .hide-content .close {
 	float: right;
 	font-size: 1.5rem;
 	color: #b0b0b0;
+	cursor: pointer;
 }
 
 .hide-content h4 {
@@ -350,9 +343,10 @@ main {
 }
 
 .hide-content p {
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	word-spacing: 2px;
 	line-height: 2rem;
+	font-family: inherit;
 }
 
 .hide-content p em{
@@ -364,13 +358,6 @@ main {
 	line-height: 2.2rem;
 }
 
-.hide-content p:nth-child(4) {
-	text-indent: 1.5rem;
-	line-height: 2.2rem;
-	margin-bottom: 3rem;
-
-}
-
 .hide-content p:nth-child(5) {
 	text-align: right;
 	margin-right: 1rem;
@@ -378,7 +365,7 @@ main {
 
 .hide-content address {
 	text-align: right;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	font-style: normal;
 	line-height: 2rem;
 	margin-right: 1rem;
@@ -406,6 +393,8 @@ main {
 	width: 4rem;
 	text-align: center;
 	transition: opacity .5s linear;
+	cursor: pointer;
+
 }
 
 .aside-nav li i {
