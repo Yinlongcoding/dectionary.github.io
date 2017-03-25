@@ -31,6 +31,10 @@ ul, li {
 	list-style: none outside none;
 }
 
+body {
+	background: linear-gradient(to left, #fff, #eee9e5, #f2f2f2, #d5d5d5);
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -83,69 +87,73 @@ ul, li {
 	header
    ======== */
 header {
+	width: 70%;
 	display: flex; 
 	padding: 2rem 1rem 3rem 1rem;
-	margin-bottom: 1rem;
-	color: #2c3e50;
+	/*margin-bottom: 1rem;*/
+	color: #6d7993;
 }
 
 header h1 {	
-	font-family: "Savoye LET", "Adobe Caslon Pro";
-	margin-top: 1rem;
+	font-family: "Didot", "Adobe Caslon Pro";
+	/*margin-top: 1rem;*/
 	padding-top: 1rem;
 	font-size: 6rem;
-	color: #42b983;	
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.233);
+	color: inherit;	
+	text-shadow: 0 1px 10px rgba(0, 0, 0, 0.03);
 }
 
 
 .searchInput {
-	display: inline-block;
-	width: 30rem;
+	width: 23rem;
 	height: 3rem;
-	margin: 1rem 0 0 3rem;
-	border: 1px solid #999999;
-	border-radius: 3rem;
+	margin: 0.5rem 0 0 3rem;
+	border-bottom: 1px solid #6d7993;
+	position: relative;
 }
 
+.searchInput .btn {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
 .searchInput input {
 	outline: none;
 	height: 3rem;
-	width: 18rem;
-	border-radius: 3rem;
+	width: 15rem;
 	border: transparent;
-	padding-left: 2rem;
-	padding-right: 1rem;
+	padding-left: 1rem;
+	padding-right: 2rem;
 	font-size: 2.3rem;
-	color: inherit;
+	color: #41464b;
 	background-color: inherit;
 }
 
 .searchInput .delword, .searchword {
-	float: right;
 	height: 3rem;
-	border-radius: 1rem;
 }
 
 .searchInput .delword {
-	margin-right: 1.5rem;
+	margin-right: 0.5rem;
 }
 
 .searchInput .delword i {
-	color:#FFD39B;
-	background-color: inherit ;
+	color: #9099a2;
 }
 
 .searchInput .searchword {
-	border-radius: 3rem;
 	width: 4rem;
-	background-color: #42b983;
+	background-color: #6d7993;
 }
 
 .searchInput .searchword i {
-	color: white;
+	color: #fff;
 }
 
+.searchInput .searchword i:hover,
+.searchInput .delword i:hover {
+	color: #fff;
+}
 /* ========
 	main
    ======== */
@@ -159,11 +167,12 @@ main {
 .wordcontents {
 	width: 70%;
 	padding: 1rem;
+	color: #41464b;
 }
 
 .wordcontents h1 {
 	line-height: 3rem;
-	background: linear-gradient(to right, #42b983, #fff);
+	background: #6d7993;
 	color: #fff;
 	text-indent: 2rem;
 }
@@ -180,16 +189,15 @@ main {
 .wordcontents .pron {
 	line-height: 3rem;
 	font-size: 1.6rem;
-	color: #333;
+	color: #41464b;
 }
 
 .wordcontents .pron i {
 	font-style: normal;
-
 }
 
 .wordcontents .pron .country {
-	color: #ff9600;
+	color: #96858f;
 }
 
 .wordcontents .pron .us {
@@ -202,19 +210,19 @@ main {
 
 .wordcontents .pron button i {
 	font-size: 2rem;
-	color: #636363;
+	color: #9099a2;
 }
 
 .wordcontents .def {
 	padding-top: 0.5rem;
 	font-size: 1.6rem;
 	word-spacing: 1px;
-	color: #333;	
+	color: inherit;	
 }
 
 .wordcontents .def i {
 	font-size: 2rem;
-	color: #FFD39B;
+	color: #666;
 }
 
 .wordcontents .def span {
@@ -222,29 +230,31 @@ main {
 }
 
 .wordcontents .def span:nth-child(3) {
-	color: #b0b0b0;
+	color: #9099a2;
 }
 
 .wordcontents .mean {
 	padding-top: 0.5rem;
 	font-size: 1.6rem;
+	color: #96858f;
 }
 
 .wordcontents .mean em {
 	font-style: normal;
 	font-size: 1.5rem;
-	color: #e96900;
-	text-shadow: none;
+	color:#96858f;
 }
 
 .wordcontents .mean p {
-	color:#EEC591;
+	color:inherit;
 	line-height: 2rem;
 }
 
 .wordcontents .example{
 	padding-top: 0.8rem;
 	font-size: 1.5rem;
+	color: #4b4b4b;
+	font-family: "Didot";
 }
 
 .wordcontents .example p {
@@ -252,7 +262,6 @@ main {
 }
 
 .wordcontents .example p:first-child {
-	font-weight: 300;
 	font-size: 1.6rem;
 	color: inherit;
 }
@@ -263,15 +272,18 @@ main {
 	margin-top: 1rem;
 	padding-left: 1rem;
 	width: 15rem;
+	color: #6d7993;
 }
 
 .history h1 {
 	line-height: 3rem;
+	color: inherit;
 }
 
 .history h1 i {
 	font-size: 2rem;
-	color: #42b983;
+	color:  #6d7993;
+	margin-right: 0.5rem;
 }
 
 .history ul li {
@@ -284,7 +296,7 @@ main {
 
 .history ul li button {
 	padding: 0;
-	color: transparent;
+	color: inherit;
 	opacity: 0;
 	transition: opacity .3s linear;
 }
@@ -298,7 +310,7 @@ main {
 }
 
 .history ul li:hover button {
-	color: #FFD39B;
+	color: #6d7993;
 	opacity: 1;
 }
 
@@ -409,6 +421,7 @@ main {
 
 .aside-nav li i[name="night"] {
 	color: #a2abd3;
+	opacity: 0.5;
 	text-shadow:0rem 0rem 2rem #324d90;
 }
 

@@ -18,14 +18,14 @@
                   class="wordInput" 
                   v-model="inputWord" @keyup.13="search"
                   :autofocus=" inputWord === '' ">  
-            
-          <button class="searchword default" @click=" search ">
-            <i class="iconfont icon-search"></i>
-          </button>
-          <button class="delword default" @click=" del " 
-                  v-show=" inputWord != '' ">
-            <i class="iconfont icon-del"></i>
-          </button>
+          <div class="btn">
+            <button class="delword default" @click=" del " v-show=" inputWord != '' ">
+              <i class="iconfont icon-del"></i>
+            </button>
+            <button class="searchword default" @click=" search ">
+              <i class="iconfont icon-search"></i>
+            </button>
+          </div>  
         </div>
     </header>
 
@@ -93,5 +93,5 @@
 <script src="js/main.js"></script>
 <script src="js/event.js"></script>
 <script src="js/particles.js"></script>
-<script src="theme/normal.js" name="night"></script>
+<script src="theme/night.js"></script>
 </html>

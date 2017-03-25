@@ -9,19 +9,27 @@ $(function(){
 	$('.night').click(function(){
 		var style = document.createElement('style')
 			style.innerHTML = `
-				body { background: #303030;}
-				header { color: #b0b0b0;}
-				.wordcontents h1 { line-height: 3rem; 
-					background: -webkit-linear-gradient(left, #42b983, #303030); 
-					background: -o-linear-gradient(left, #42b983, #303030);
-					background: linear-gradient(to right, #42b983, #303030);
-					color: #fff;text-indent: 2rem;}
-				.wordcontents .pron i { color: #b0b0b0;}
-				.wordcontents .def { color: #b0b0b0;}
-				.wordcontents .mean { color: #EEC591;}
-				.wordcontents .example { color: #b0b0b0; }
-				.history { color: #b0b0b0; }
-				.history ul li i { background-color: inherit; }`		
+				body { background: #000;}
+        header { color: #062f4f;}
+        header .searchInput { border-color: #062f4f;}
+        header .searchInput input {  color: #c0c0c0; }
+        header .searchInput .searchword { background-color: #062f4f;color: #b0b0b0; }
+        header .searchInput .searchword i { color: #b0b0b0; }
+        .wordcontents h1 { 
+        background: -webkit-linear-gradient(left,#062f4f, #062f4f, #000); 
+        background: -o-linear-gradient(left,#062f4f, #062f4f, #000);
+        background: linear-gradient(to right,#062f4f, #062f4f, #000);
+        color: #c0c0c0;}
+        .wordcontents .pron .country {color:#6b7a8f ;}
+        .wordcontents .pron i { color:#6b7a8f;}
+        .wordcontents .def { color: #b0b0b0;}
+        .wordcontents .def i{ color: #EEC591;}       
+        .wordcontents .example { color: #b1b1b1; }
+        .history { color: #c0c0c0; }
+        .history h1 i {color: #062f4f;}
+        .history ul li i { background-color: inherit; }
+        .aside .aside-nav .night i { text-shadow: 0rem 0rem 2rem #a2abd3; }`
+						
 		$('head')[0].appendChild(style)
 	})
 	$('.sunning').click(function(){$('head style').remove()	})
