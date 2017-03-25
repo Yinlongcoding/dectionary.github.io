@@ -1,6 +1,7 @@
 $(function(){
 	if( $('main').css('display') === 'none' ){$('.hide').show()}else {$('.hide').hide()}
 
+	$('.close').click(function(){$('.hide').hide()})
 	$('.defAm').click(function(){$(this)[0].querySelector('audio').play()})
 	$('.defEn').click(function(){$(this)[0].querySelector('audio').play()})
 	$('.wordInput').keyup(function(event) {if(event.keyCode === 13) {$('.hide').hide()}})
@@ -20,12 +21,13 @@ $(function(){
 				.wordcontents .mean { color: #EEC591;}
 				.wordcontents .example { color: #b0b0b0; }
 				.history { color: #b0b0b0; }
-				.history ul li i { background-color: inherit; }`
-		
+				.history ul li i { background-color: inherit; }`		
 		$('head')[0].appendChild(style)
 	})
-
-	$('.sunning').click(function(){
-		$('head style').remove()	
-	})
+	$('.sunning').click(function(){$('head style').remove()	})
+	$(window).scroll(function(){ if($(window).scrollTop() >= 300) {$('.toupper').fadeIn(300) }else{ $('.toupper').fadeOut(300)}})
+    $('.toupper').click(function(){$('html,body').animate({scrollTop: '0px'}, 800)})
 })
+
+  
+    

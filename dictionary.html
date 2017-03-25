@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="font/font_4aglh4ktrqczbyb9/iconfont.css">
+  <link rel="stylesheet" href="css/viewport.css">
+  <link rel="stylesheet" href="font/font_xm8m7b0pv3elv7vi/iconfont.css">
   <title>Dictionary</title>
 </head>
 <body>
-<div id="particles-js"></div>
+  <div id="particles-js"></div>
   <div class="app">
     <header>
         <h1>Dictionary</h1>
@@ -18,10 +19,10 @@
                   v-model="inputWord" @keyup.13="search"
                   :autofocus=" inputWord === '' ">  
             
-          <button class="searchword" @click=" search ">
+          <button class="searchword default" @click=" search ">
             <i class="iconfont icon-search"></i>
           </button>
-          <button class="delword" @click=" del " 
+          <button class="delword default" @click=" del " 
                   v-show=" inputWord != '' ">
             <i class="iconfont icon-del"></i>
           </button>
@@ -49,27 +50,25 @@
         </div>
       </div>   
 
-        <div class="history">
-          <h1>
-            <i class="iconfont icon-history"></i>
-          Your History
-          </h1>
-          <div>
-            <ul>
-              <li v-for=" (history, index) in histories ">
-                <button @click=" delHistory(index) ">
-                  <i class="iconfont icon-del"></i>
-                </button>
-                <span>{{history}}</span>
-              </li>
-            </ul>
-          </div>
-        </div>   
+      <div class="history">
+        <h1><i class="iconfont icon-history"></i>Your History</h1>
+        <div>
+          <ul>
+            <li v-for=" (history, index) in histories ">
+              <button class="default" @click=" delHistory(index) ">
+                <i class="iconfont icon-del"></i>
+              </button>
+              <span>{{history}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>   
     </main>
   </div>
 
-  <div class="hide">
-    <section class="hide-content">
+  <article class="hide">
+    <section class="hide-content clear-fix">
+    <button class="close default">close</button>
       <h4>Dear user</h4>
       <p>    
         First of all, I am honored for your visit. I sincerely hope that this dictionary page can help you learn English. At the same time, I hope you can use the dictionary correctly. Finally,a word to you: <em>"纸上得来终觉浅，绝知此事要躬行"</em>. In the process of using the dictionary，if you find some questions, or have any suggestions, please contact me.</p>
@@ -77,23 +76,17 @@
       <p>from a programmer</p>
       <address>wnhoper@gmail.com</address>
     </section>
-  </div> 
+  </article> 
   
   <aside class="aside">
      <div class="aside-content">
        <ul class="aside-nav">
          <li class="sunning"><i class="iconfont icon-taiyangsun45" name="sunning"></i></li>
          <li class="night"><i class="iconfont icon-moon" name="night"></i></li>
-<!--          <li class="spring"><i class="iconfont icon-icon" name="spring"></i></li>
-         <li class="summer"><i class="iconfont icon-cream" name="summer"></i></li>
-         <li class="autumer"><i class="iconfont icon-maisui" name="autume"></i></li>
-         <li class="winter"><i class="iconfont icon-xuehua" name="winter"></i></li> -->
        </ul>
      </div>
+     <button class="toupper default"><i class="iconfont icon-fanhuidingbu"></i></button>
   </aside>
-  
-  
-  
 </body>
 <script src="js/vue.js"></script>
 <script src="js/jquery.min.js"></script>

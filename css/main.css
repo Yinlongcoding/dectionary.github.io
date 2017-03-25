@@ -10,6 +10,7 @@ html {
 	color: #fff;
 	background-color: #b3d4fc;
 }
+
 a {
 	text-decoration: none;
 	color: #222;  
@@ -41,10 +42,12 @@ ul, li {
  
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
-
+/* =====
+	vue
+   ===== */
 [v-cloak] {
   display: none;
 }
@@ -53,21 +56,8 @@ ul, li {
 	width: 80%;
 	padding: 0 1rem;
 	margin: 0 auto;
-	box-shadow: 0 0 3rem
-    rgba(0, 0, 0, 0.133);
 }
 
-@media only screen and (max-width: 38.5em) {
-	.app {
-		width: 96%;
-	}
-} 
-
-@media only screen and (max-width: 22.375em) {
-	.app {
-		width: 94%;
-	}
-}
 /* ========
 	tool
    ======== */
@@ -82,6 +72,11 @@ ul, li {
 	clear: both;
 }
 
+.default {
+	outline: none;
+	border: none;
+	background-color: inherit;
+}
 
 
 /* ========
@@ -105,7 +100,6 @@ header h1 {
 
 
 .searchInput {
-	
 	display: inline-block;
 	width: 30rem;
 	height: 3rem;
@@ -129,11 +123,8 @@ header h1 {
 
 .searchInput .delword, .searchword {
 	float: right;
-	outline: none;
 	height: 3rem;
-	border: none;	
 	border-radius: 1rem;
-	background-color: inherit;
 }
 
 .searchInput .delword {
@@ -155,117 +146,6 @@ header h1 {
 	color: white;
 }
 
-@media only screen and (max-width: 60em) {
-	header {
-		padding-bottom: 1rem;
-	}
-	header .searchInput {
-		margin-left: 1rem;
-		width: 25rem;
-	}
-	header .searchInput input {
-		width: 14.5rem;
-	}
-	header .searchInput .delword {
-		margin-right: 1rem;	
-	}
-}
-
-@media only screen and (max-width: 48.75em) {
-	header {
-		justify-content: space-around;
-	}
-
-	header .searchInput {
-		margin-left: 0;
-	}
-}
-
-@media only screen and (min-width: 38.5em) and (max-width: 48.5em) {
-	header h1 {
-		font-size: 5rem;
-		margin-bottom: 1rem;
-	}
-
-	header .searchInput {
-		width: 23rem;
-		height: 2.5rem;
-		margin-top: 1.3rem;
-	}
-
-	header .searchInput input{
-		width: 12.5rem;
-		height: 2.5rem;
-		font-size: 2rem;
-	}
-
-	header .searchInput button {
-		height: 2.5rem;
-	}
-}
-
-@media only screen and (max-width: 38.5em) {
-	header {
-		flex-direction: column;
-		align-items: center;
-		padding-top: 1rem;
-		padding: 0.5rem 0 0 0 ;
-	}
-
-	header h1 {
-		font-size: 6rem;
-	}
-
-	header .searchInput {
-		width: 60%;
-	}
-
-	header .searchInput input {
-		padding-right: 0;
-		width: 65%;
-	}
-	
-	header .searchInput .delword {
-		padding: 0;
-
-	}
-} 
-
-@media only screen and (min-width: 22.376em) and (max-width: 31.255em){
-	header .searchInput input {
-		width: 60%;
-	}
-}
-
-@media only screen and (max-width: 22.375em) {
-	header {
-		padding-top: 0;
-		padding-bottom: 1rem;
-	}
-	header h1 {
-		display: none;
-	}
-
-	header .searchInput {		
-		height: 2.3rem;
-		width: 70%;
-		margin-top: 1rem;
-	}
-
-	header .searchInput input {
-		height: 2.3rem;
-		font-size: 1.6rem;	
-		width: 60%;	
-	}
-
-	header .searchInput button {
-		height: 2.3rem;
-	}
-
-	header .searchInput .delword {
-		display: none;
-	}
-}
 /* ========
 	main
    ======== */
@@ -317,10 +197,7 @@ main {
 }
 
 .wordcontents .pron button {
-	outline: none;
 	padding: 0;
-	border: none;
-	background:none;
 }
 
 .wordcontents .pron button i {
@@ -379,98 +256,6 @@ main {
 	font-size: 1.6rem;
 	color: inherit;
 }
-
-
-@media only screen and (max-width: 48.75em) {
-	main {
-		justify-content: center;
-	}
-	main .wordcontents {
-		padding-top: 1rem;
-		width: 88%;
-	}
-	
-	main .wordcontents h1{
-		background: #42b983;
-	}
-}
-
-@media only screen and (max-width: 38.5em) {
-	main {
-		padding-top: 0;
-		margin-top: 0;
-	}
-	main .wordcontents {
-		width: 90%;
-	}
-	
-	main .wordcontents h1{
-		background: #42b983;
-	}
-
-	main .wordcontents .wordcontent .def {
-		padding-top: 0;
-	}
-	
-	main .wordcontents .wordcontent .def span {
-		font-size: 1.3rem;
-		line-height: 1.5rem;
-	}
-
-	main .wordcontents .wordcontent .mean {
-		padding-top: 0;
-	}
-
-	main .wordcontents .wordcontent .example {
-		padding-top: 0.3rem;
-	}
-}
-
-@media only screen and (max-width: 22.375em) {
-	main .wordcontents {
-		padding: 1rem 0;
-		width: 98%;
-	}
-
-	main .wordcontents h1{
-		line-height: 2.3rem;
-		font-size: 1.5rem;
-	}
-	
-	main .wordcontents h1 i {
-		font-size: 1.8rem;
-	}
-	main .wordcontents .pron {
-		line-height: 1.8rem;
-		font-size: 1.3rem;
-	}
-	main .wordcontents .pron button i {
-		font-size: 1.4rem;
-	}
-	main .wordcontents .def {
-		font-size: 1.3rem;
-		line-height: 1.8rem;
-	}
-	main .wordcontents .def i {
-		font-size: 1.4rem;
-	}
-	main .wordcontents .mean p {
-		line-height: 1.5rem;
-		font-size: 1.2rem;
-	}
-	main .wordcontents .mean em {
-		font-size: 1.2rem;
-	}
-	
-	main .wordcontents .example p{
-		font-size: 1.2rem;
-		line-height: 1.5rem;
-	}
-
-	main .wordcontents .example p:first-child{
-		font-size: 1.3rem;
-	}
-}
 /* ========
 	history 
    ======== */
@@ -498,10 +283,7 @@ main {
 }
 
 .history ul li button {
-	outline: none;
 	padding: 0;
-	background: inherit;
-	border: none;
 	color: transparent;
 	opacity: 0;
 	transition: opacity .3s linear;
@@ -518,12 +300,6 @@ main {
 .history ul li:hover button {
 	color: #FFD39B;
 	opacity: 1;
-}
-
-@media only screen and (max-width: 48.75em) {
-	.history{
-		display: none;
-	}
 }
 
 /* =======
@@ -548,6 +324,12 @@ main {
     background: linear-gradient(#F5DEB3,#FFF8DC,#F5DEB3);
 }
 
+.hide-content .close {
+	float: right;
+	font-size: 1.5rem;
+	color: #b0b0b0;
+}
+
 .hide-content h4 {
 	line-height: 2rem;
 	margin: 1rem 0 0.5rem 0;
@@ -565,19 +347,19 @@ main {
 	font-style: normal;
 }
 
-.hide-content p:nth-child(2) {
+.hide-content p:nth-child(3) {
 	text-indent: 1.5rem;
 	line-height: 2.2rem;
 }
 
-.hide-content p:nth-child(3) {
+.hide-content p:nth-child(4) {
 	text-indent: 1.5rem;
 	line-height: 2.2rem;
 	margin-bottom: 3rem;
 
 }
 
-.hide-content p:nth-child(4) {
+.hide-content p:nth-child(5) {
 	text-align: right;
 	margin-right: 1rem;
 }
@@ -589,73 +371,33 @@ main {
 	line-height: 2rem;
 	margin-right: 1rem;
 }
-
-@media only screen and (max-width: 60em) {
-	main .history {
-		width: 14rem;
-		/*justify-content: flex-start;*/
-	}
-}
-
-@media only screen and (max-width: 38.5em) {
-	.hide {
-		width: 90%;
-	}
-}	
-
-@media only screen and (max-width: 22.375em) {
-	.hide {
-		width: 90%;
-		height: 60%;
-	}
-	.hide-content {
-		margin-top: 2rem;
-		padding: 1rem 2rem;
-	}
-	.hide-content p:nth-child(2) {
-		font-size: 1.2rem;
-		line-height: 1.5rem;
-	}
-	.hide-content p:nth-child(3) {
-		font-size: 1.2rem;
-		line-height: 1.5rem;
-		margin-bottom: 1rem;
-	}
-	.hide-content p:nth-child(4) {
-		font-size: 1.2rem;
-		line-height: 1.5rem;
-	}
-	.hide-content address {
-		font-size: 1.2rem;
-		line-height: 1.5rem;
-	}
-}
 /* =======
 	asdie
    ======= */
 
 .aside {
+	height: 96%;
 	position: fixed;
 	right: 0;
 	top: 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
 }
 
+.aside-nav {
+	margin-top: 4rem;
+}
 
 .aside-nav li {
 	height: 4rem;
 	width: 4rem;
 	text-align: center;
-	opacity: 0.5;
 	transition: opacity .5s linear;
-}
-
-.aside-nav li:first-child {
-	opacity: 1;
 }
 
 .aside-nav li i {
 	font-size: 3.5rem;
-	display: inline-block;
 	margin-top: 1.1rem;
 }
 
@@ -670,42 +412,16 @@ main {
 	text-shadow:0rem 0rem 2rem #324d90;
 }
 
-
-@media only screen and (max-width: 22.375em) {
-	.aside {
-		right: 0.5rem;
-	}
-
-	.aside-nav li {
-		height: 2rem;
-		width: 2rem;
-	}
-	.aside-nav li i {
-		margin-top: 0.4rem;
-		font-size: 2rem;
-	}
-}
-/*.aside-nav li i[name="spring"] {
-	color: #9BCD9B;
-	text-shadow:0rem 0rem 3rem #9BCD9B;
+.aside .toupper {
+	margin-bottom: 1rem;
+	height: 2rem;
+	font-size: 2rem;
+	color: #a2abd3;
 }
 
-
-.aside-nav li i[name="summer"] {
-	color:#BFEFFF;
-	text-shadow:0rem 0rem 3rem #FF8247;
+.aside .toupper i {
+	font-size: inherit;
 }
-
-.aside-nav li i[name="autume"] {
-	color: #DEB887;
-	text-shadow:0rem 0rem 3rem #FFA54F;
-}
-
-.aside-nav li i[name="winter"] {
-	color: #C6E2FF;
-	text-shadow:0rem 0rem 3rem #Fcfcfc;
-}*/
-
 /* =======
    particles-js
    ======= */

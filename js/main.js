@@ -4,13 +4,13 @@ Vue.component('phonetic',{
   <div>
     <span class="country uk">UK</span>
     <i>/{{prons[0].text}}/</i>
-    <button class="defAm">
+    <button class="defAm default">
       <i class="iconfont icon-laba"></i>
       <audio class="play" :src="prons[0].mp3" ></audio>
     </button>
     <span class="country us">US</span>
     <i>/{{prons[1].text}}/</i>
-    <button class="defEn">
+    <button class="defEn default">
       <i class="iconfont icon-laba"></i>
       <audio class="play" :src="prons[1].mp3"></audio>
     </button> 
@@ -34,7 +34,7 @@ Vue.component('senses', {
       <i class="iconfont icon-start"></i>   
       <span>{{ sense.hw }}</span>
       <span>{{ sense.pos[0] }}</span>
-      <span>[ {{ sense.guideword }} ]</span>
+      <span>{{ sense.guideword.toLowerCase() }}</span>
     </div>
     <div v-for="example in sense.examples">
       <p>{{example.en}}</p> 
