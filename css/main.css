@@ -32,7 +32,7 @@ ul, li {
 }
 
 body {
-	background: linear-gradient(to left, #fff, #eee9e5, #f2f2f2, #d5d5d5);
+	background: linear-gradient(to left, #f0f0f0, #eee9e5, #f2f2f2, #d5d5d5);
 }
 
 ::-webkit-scrollbar {
@@ -87,10 +87,10 @@ body {
 	header
    ======== */
 header {
-	width: 70%;
 	display: flex; 
 	padding: 2rem 1rem 3rem 1rem;
 	color: #6d7993;
+	box-sizing: border-box;
 }
 
 header h1 {	
@@ -209,6 +209,7 @@ main {
 .wordcontents .pron button i {
 	font-size: 2rem;
 	color: #9099a2;
+	cursor: pointer;
 }
 
 .wordcontents .def {
@@ -269,7 +270,7 @@ main {
 .history {	
 	margin-top: 1rem;
 	padding-left: 1rem;
-	width: 15rem;
+	width: 20%;
 	color: #6d7993;
 }
 
@@ -288,15 +289,12 @@ main {
 	padding-left: 0.3rem;
 }
 
-.history ul li:hover{
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.033);
-}
-
 .history ul li button {
 	padding: 0;
 	color: inherit;
 	opacity: 0;
 	transition: opacity .3s linear;
+	cursor: pointer;
 }
 
 .history ul li span {

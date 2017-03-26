@@ -10,7 +10,7 @@
 
 @media only screen and (max-width: 22.375em) {
 	.app {
-		width: 94%;
+		width: 96%;
 	}
 }
 /* ===============
@@ -36,10 +36,6 @@
 
 @media only screen and (max-width: 48.75em) {
 	
-	header {
-		justify-content: space-around;
-	}
-
 	header .searchInput {
 		margin-left: 0;
 	}
@@ -54,19 +50,12 @@
 
 	header .searchInput {
 		width: 23rem;
-		height: 2.5rem;
-		margin-top: 1.3rem;
 	}
 
 	header .searchInput input{
-		width: 12.5rem;
-		height: 2.5rem;
 		font-size: 2rem;
 	}
 
-	header .searchInput button {
-		height: 2.5rem;
-	}
 }
 
 @media only screen and (max-width: 38.5em) {
@@ -74,33 +63,36 @@
 	header {
 		flex-direction: column;
 		align-items: center;
-		padding-top: 1rem;
-		padding: 0.5rem 0 0 0 ;
+		padding: 1rem 0 0 0 ;
 	}
 
 	header h1 {
-		font-size: 6rem;
+		font-size: 5rem;
 	}
+
 
 	header .searchInput {
-		width: 60%;
-	}
-
-	header .searchInput input {
-		padding-right: 0;
-		width: 65%;
+		margin-top: 2rem;
 	}
 	
 	header .searchInput .delword {
 		padding: 0;
+	}
 
+	header .searchInput button i{
+		height: 3rem;	
 	}
 } 
 
 @media only screen and (min-width: 22.376em) and (max-width: 31.255em){
 	
-	header .searchInput input {
-		width: 60%;
+	header h1 {
+		margin-bottom: 1rem;
+		font-size: 5rem;
+	}
+
+	header .searchInput {
+		margin-top: 1.5rem;		
 	}
 }
 
@@ -141,16 +133,9 @@
    ============= */
 
 @media only screen and (max-width: 48.75em) {
-	main {
-		justify-content: center;
-	}
 	main .wordcontents {
 		padding-top: 1rem;
-		width: 88%;
-	}
-	
-	main .wordcontents h1{
-		background: #42b983;
+		width: 100%;
 	}
 }
 
@@ -163,10 +148,6 @@
 		width: 90%;
 	}
 	
-	main .wordcontents h1{
-		background: #42b983;
-	}
-
 	main .wordcontents .wordcontent .def {
 		padding-top: 0;
 	}

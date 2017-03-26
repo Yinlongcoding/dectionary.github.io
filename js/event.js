@@ -10,7 +10,7 @@ $(function(){
 			style.innerHTML = `
 		body { background: #000;}
         header { color: #062f4f;}
-        header .searchInput { border-color: #062f4f;}
+        header .searchInput { border-color:#062f4f;}
         header .searchInput input {  color: #c0c0c0; }
         header .searchInput .searchword { background-color: #062f4f;color: #b0b0b0; }
         header .searchInput .searchword i { color: #b0b0b0; }
