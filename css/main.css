@@ -52,7 +52,7 @@ body {
 /* =====
 	vue
    ===== */
-[v-cloak] {
+h1[v-cloak] {
   display: none;
 }
 

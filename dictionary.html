@@ -31,10 +31,9 @@
 
     <main v-show=" contents != '' ">
       <div class="wordcontents">
-        <h1 class="v-clock">
+        <h1>
           <i class="iconfont icon-write"></i>
-          <span v-show=" searchWord != '' ">{{ searchWord }}</span> 
-          <!-- <i>{{ contents[0].senses[0].pos[0] }}</i> -->
+          <span v-show=" searchWord != '' " v-html="searchWord"></span> 
         </h1>
         <div v-for="content in contents" class="wordcontent">            
           <phonetic class="pron" :prons="content.prons"></phonetic>          
