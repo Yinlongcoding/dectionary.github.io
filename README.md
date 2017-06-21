@@ -5,7 +5,7 @@
 - 查阅相关技术文档时常需要查询单词释义，那就得打开谷歌翻译，时间久了就依赖上了
 - 所以呢，我自己写一个学习工具：字典！
 
-## 由于数据接口丢失，词典项目暂时停止。待我自己抓一份数据
+## 由于数据接口丢失，词典项目暂时停止,待我自己抓一份数据
 
 ### 数据来源：
 - 来自一位前端前辈的馈赠 
@@ -21,7 +21,7 @@
 ### 展示：
 V_1.0 URL: http://sliver.site/dictionary.github.io/index.html  
 V_2.0 URL: http://sliver.site/dictionary.github.io/dictionary.html
-
+v-2.1 URL: https://github.com/Yinlongcoding/dictionary.github.io
 ### 迭代过程：
 每一天的迭代内容我都会在 update.md 里声明 
 url：http://sliver.site/dictionary.github.io/update.md
