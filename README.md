@@ -20,7 +20,7 @@
 
 ### 展示：
 V_1.0 URL: http://sliver.site/dictionary.github.io/index.html  
-V_2.0 URL: http://sliver.site/dictionary.github.io/dictionary.html
+V_2.0 URL: http://sliver.site/dictionary.github.io/dictionary.html  
 v-2.1 URL: https://github.com/Yinlongcoding/dictionary.github.io
 ### 迭代过程：
 每一天的迭代内容我都会在 update.md 里声明 
