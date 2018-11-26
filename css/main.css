@@ -322,7 +322,8 @@ main {
 }
 
 .hide-content {
-	margin-top: 5rem;
+	margin-top: 50%;
+	transform: translateY(-25%);
 	padding: 2rem 2rem 2rem 3rem;
 }
 
